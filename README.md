@@ -1,8 +1,3 @@
-Perfect 🔆 — here’s a clean, well-structured **README introduction section** you can copy-paste right at the top of your `README.md`.
-
-It fits your project’s tone and aligns with your grading criteria (clarity, critical thinking, and project understanding).
-
----
 
 ## 🌞 **Solar Challenge - Week 0: Development Setup and Data Analysis Strategy**
 
@@ -61,7 +56,3 @@ The main objective of this phase was to:
 After detailed analysis and comparison, each country was evaluated using weighted metrics (with **GHI** as the top priority).
 The resulting report highlights the **most viable country** for solar panel investment, considering irradiance strength, environmental stability, and minimal maintenance risks.
 
----
-
-Would you like me to add a **“Project Structure”** section next (showing what each folder does, e.g., `data/`, `filtered/`, `cleaned/`, `final/`, etc.)?
-That would make your README look complete and easy to navigate for grading or GitHub visitors.
