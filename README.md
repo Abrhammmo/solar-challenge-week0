@@ -1,51 +1,45 @@
+Sierra Leone - Solar Energy Data Analysis
 
+This section covers the data cleaning and exploratory analysis of Sierra Leone’s solar performance dataset. The goal was to assess its potential for solar power generation relative to Benin and Togo.
 
-# Togo Solar Energy Data Analysis: Assessing Investment Suitability
+Workflow Overview
 
-This document summarizes the **Data Preparation** and **Exploratory Data Analysis (EDA)** performed on Togo’s solar performance dataset, assessing its suitability for solar energy investment.
+Data Preparation
 
-***
+Loaded Sierra Leone’s dataset and inspected for missing or invalid entries.
 
-## Workflow Overview
+Dropped the Comments column due to null values.
 
-The analysis involved two main phases:
+Set negative irradiance values (GHI, DNI, DHI) to zero and excluded zeros (nighttime).
 
-### Data Preparation
+Imputed cleaning values to preserve data balance.
 
-* Data Cleaning: Loaded and checked for missing/inconsistent values.
-* Irrelevant Data Removal: The empty `Comments` column was removed.
-* Irradiance Correction: Negative irradiance values (GHI, DNI, DHI) were replaced with zero.
-* Filtering: Nighttime readings (irradiance = 0) were removed to focus on solar performance.
-* Imputation: Missing module cleaning status values were imputed.
-* Outlier Handling: Outliers were removed using the Interquartile Range (IQR) method.
+Removed outliers using the IQR method for consistent analysis.
 
-### Exploratory Data Analysis (EDA)
+Exploratory Data Analysis (EDA)
 
-* Trend Analysis: Analyzed daily and hourly irradiance trends.
-* Cleaning Efficacy: Compared irradiance when modules were clean vs. unclean.
-* Environmental Factors: Investigated relationships between irradiance and:
-    * Ambient Temperature ($T_{amb}$)
-    * Wind behavior (WS, WSgust)
-    * Precipitation patterns
+Analyzed irradiance patterns across different hours of the day.
 
-***
+Compared module performance between clean and unclean readings.
 
-## Key Findings
+Studied temperature (Tamb) variations alongside GHI trends.
 
-The data suggests strong potential for solar investment in Togo:
+Examined wind and precipitation data to identify environmental limitations.
 
-* Strong Irradiance: Togo exhibits strong, consistent GHI and DNI patterns, indicating high potential for generation.
-* Cleaning Impact: Module cleaning had a significant positive effect on irradiance accuracy, highlighting the value of maintenance.
-* Wind Risk: Wind gust speeds (WSgust) were slightly higher than regional benchmarks (Benin), suggesting a minor structural risk to be considered in design.
-* Reliability: Moderate precipitation levels suggest reasonable operational reliability with infrequent disruptions.
+Key Findings
 
-***
+Sierra Leone showed lower overall irradiance compared to Benin and Togo.
 
-## Tools & Next Steps
+Data stability improved after filtering and outlier removal.
 
-* Tools Used: Python libraries (pandas, numpy, matplotlib, seaborn, sweetviz, dataprep.eda), Git/GitHub, and Visual Studio Code.
-* Next Steps: Togo's metrics will be compared with those of Benin and Sierra Leone using a weighted scoring framework to determine overall investment potential.
+Higher rainfall and humidity may affect solar reliability and energy capture.
 
-***
+Wind speeds were generally mild, reducing structural concerns but limiting airflow cooling benefits.
 
-Would you like to know more about the weighted scoring framework mentioned in the next steps?
+Tools Used
+
+Python libraries: pandas, numpy, matplotlib, seaborn, sweetviz, dataprep.eda
+
+Git and GitHub for project version control
+
+Visual Studio Code for development and data exploration
