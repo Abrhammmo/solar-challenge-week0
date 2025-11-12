@@ -1,7 +1,3 @@
-You want the text from the previous response, made larger, but without using any bold formatting and keeping it less than a page. Since I cannot directly control the font size in the final output and can only use standard markdown (like headings for larger text), I will present the text using an appropriate heading size.
-
-***
-
 # Togo Solar Energy Data Analysis: Assessing Investment Suitability
 
 This document summarizes the **Data Preparation** and **Exploratory Data Analysis (EDA)** performed on Togo’s solar performance dataset, assessing its suitability for solar energy investment.
@@ -48,6 +44,3 @@ The data suggests strong potential for solar investment in Togo:
 * Tools Used: Python libraries (pandas, numpy, matplotlib, seaborn, sweetviz, dataprep.eda), Git/GitHub, and Visual Studio Code.
 * Next Steps: Togo's metrics will be compared with those of Benin and Sierra Leone using a weighted scoring framework to determine overall investment potential.
 
-***
-
-Would you like to know more about the weighted scoring framework mentioned in the next steps?
