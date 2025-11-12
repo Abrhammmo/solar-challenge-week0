@@ -1,45 +1,62 @@
-Sierra Leone - Solar Energy Data Analysis
+## Sierra Leone Solar Energy Data Analysis: Assessing Investment Potential
 
-This section covers the data cleaning and exploratory analysis of Sierra Leone’s solar performance dataset. The goal was to assess its potential for solar power generation relative to Benin and Togo.
+This document summarizes the **Data Preparation** and **Exploratory Data Analysis (EDA)** performed on Sierra Leone's solar performance dataset. The analysis aimed to assess Sierra Leone's potential for **solar power generation** relative to regional comparators, **Benin and Togo**.
 
-Workflow Overview
+***
 
-Data Preparation
+### Workflow Overview
 
-Loaded Sierra Leone’s dataset and inspected for missing or invalid entries.
+The analysis followed a standard two-phase workflow, ensuring data quality before deriving insights:
 
-Dropped the Comments column due to null values.
+#### Data Preparation (Cleaning and Pre-processing)
 
-Set negative irradiance values (GHI, DNI, DHI) to zero and excluded zeros (nighttime).
+The dataset was prepared for analysis through the following steps:
 
-Imputed cleaning values to preserve data balance.
+* **Loading and Inspection:** The Sierra Leone dataset was loaded and checked for **missing or invalid entries**.
+* **Column Removal:** The `Comments` column was **dropped** due to containing only null values.
+* **Irradiance Correction:** Negative irradiance values (Global Horizontal Irradiance **GHI**, Direct Normal Irradiance **DNI**, Diffuse Horizontal Irradiance **DHI**) were set to **zero**. Nighttime readings (irradiance = 0) were then **excluded**.
+* **Imputation:** Missing module **cleaning status** values were imputed to ensure data balance for comparative analysis.
+* **Outlier Removal:** **Outliers** were removed using the **Interquartile Range (IQR) method** to maintain consistency and robust analysis.
 
-Removed outliers using the IQR method for consistent analysis.
+#### Exploratory Data Analysis (EDA)
 
-Exploratory Data Analysis (EDA)
+Key variables were analyzed to understand their impact on solar performance:
 
-Analyzed irradiance patterns across different hours of the day.
+* **Irradiance Patterns:** Irradiance trends were analyzed across different **hours of the day** to identify peak generation times.
+* **Module Performance Comparison:** Module performance was compared between **clean and unclean readings** to quantify the effect of soiling.
+* **Temperature Analysis:** Temperature variations (Ambient Temperature, $T_{amb}$) were studied alongside **GHI trends** to assess thermal efficiency impacts.
+* **Environmental Factors:** Wind speed, wind gust, and **precipitation data** were examined to identify potential environmental limitations on operations and reliability.
 
-Compared module performance between clean and unclean readings.
+***
 
-Studied temperature (Tamb) variations alongside GHI trends.
+### Key Findings
 
-Examined wind and precipitation data to identify environmental limitations.
+The exploratory analysis revealed important characteristics of the solar environment in Sierra Leone:
 
-Key Findings
+* **Lower Irradiance:** Sierra Leone showed **lower overall irradiance** levels compared to the regional comparators, Benin and Togo.
+* **Data Stability:** The consistency and reliability of the data for analysis **improved significantly** after initial filtering and outlier removal.
+* **Climate Impact:** **Higher rainfall and humidity** levels were noted, which may negatively affect solar reliability and energy capture due to increased cloud cover and soiling.
+* **Wind Conditions:** Wind speeds were generally **mild**, which reduces structural concerns for installations but also limits the beneficial **airflow cooling** effect on solar panels.
 
-Sierra Leone showed lower overall irradiance compared to Benin and Togo.
+***
 
-Data stability improved after filtering and outlier removal.
+### Tools Used
 
-Higher rainfall and humidity may affect solar reliability and energy capture.
+The analysis was executed using standard data science and version control tools:
 
-Wind speeds were generally mild, reducing structural concerns but limiting airflow cooling benefits.
+* **Python libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `sweetviz`, `dataprep.eda`.
+* **Version Control:** Git and GitHub.
+* **Development Environment:** Visual Studio Code.
 
-Tools Used
+***
 
-Python libraries: pandas, numpy, matplotlib, seaborn, sweetviz, dataprep.eda
+### Next Steps
 
-Git and GitHub for project version control
+The next phase of the project involves synthesizing the results:
 
-Visual Studio Code for development and data exploration
+* Sierra Leone's summarized metrics will be compared with those of **Benin and Togo**.
+* The final investment potential will be determined using a **weighted scoring framework** applied across all three locations.
+
+***
+
+What aspects of the analysis would you like me to elaborate on, such as the specific effects of high humidity or the implications of lower irradiance?
